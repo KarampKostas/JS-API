@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background: #8E2DE2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4A00E0, #8E2DE2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Roboto';
+    
+}
+
+header{
+    background-color: inherit;
+    padding:1.5rem;
+    display: flex;
+    justify-content: center;
+    padding:4rem;
+}
+
+.search{
+    padding:1rem 4rem;
+    border-radius: 25px;
+    border: 1px solid #a3a9eb ;
+    background-color: transparent;
+    color:#a3a9eb;
+    outline: none;
+    font-size: 1rem;
+    box-shadow: 4px 4px 10px 4px rgba(0,0,0,0.4);
+}
+
+.search:focus{
+    background-color: #4502cc;
+}
+
+.search::placeholder{
+    color:#a3a9eb;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie{
+    background-color: #565985;
+    width:270px;
+    border-radius:3px;
+    box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+    margin:1rem;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position:relative;
+}
+
+.movie:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5)
+}
+
+.movie img{
+    width:100%;
+    height:320px;
+}
+
+.movie-info{
+    display: flex;
+    justify-content: space-between;
+    padding:0.5rem 1rem 1rem;
+    align-items: center;
+    color:#eee;
+    letter-spacing: 1px;
+    font-size:0.8rem;
+    
+}
+
+.movie-info h3{
+    margin: 0;
+}
+
+.movie-info span{
+    background-color: #373b69;
+    border-radius: 3px;
+    font-weight: bold;
+    padding: 0.1rem 0.2rem;
+}
+
+.movie-info span.green{
+    background-color: rgb(36, 196, 36);
+}
+.movie-info span.orange{
+    background-color: rgb(255, 166, 0);
+}
+.movie-info span.red{
+    background-color: red;
+}
+
+.movie-container.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+ .movie-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+
+.movie-bg {
+    background-color: rgb(255, 250, 250);
+    border-radius: 5px;
+    padding: 0 2rem;
+    position: relative;
+    overflow: auto;
+    max-height: 90vh;
+    max-width: 600px;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.movie-bg .close-movie {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.movie-bg img{
+    width:250px;
+    height:300px;
+    border-radius: 4px;
+}
+
+.overview{
+    color:black;
+    font-size: 1rem;
+
+}
